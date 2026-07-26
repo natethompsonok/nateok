@@ -45,17 +45,7 @@
             object-fit: cover;
         }
 
-        /* Dark overlay to ensure text copy remains perfectly readable */
-        .video-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(180deg, rgba(11, 11, 11, 0.45) 0%, rgba(11, 11, 11, 0.60) 100%);
-            z-index: 1; /* Sits cleanly on top of the video within the container */
-            pointer-events: none; 
-        }
+       
 
         /* Content Container sitting above background */
         .container {
@@ -123,6 +113,31 @@
             border-color: #86868b;
         }
 
+
+        .mute-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 10;
+    background: rgba(11, 11, 11, 0.6);
+    color: #f5f5f7;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.6rem 1.2rem;
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+    transition: background 0.2s, border-color 0.2s;
+}
+.mute-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #f5f5f7;
+}
+
         /* Mobile Adjustments */
         @media (max-width: 600px) {
             h1 { font-size: 2rem; }
@@ -142,28 +157,38 @@
         <source src="https://customer-wokzagfroyr197cz.cloudflarestream.com/4a5d36b857fffc322ce48fc539b452cb/downloads/default.mp4" type="video/mp4">
       
     </video>
-    <div class="video-overlay"></div>
+
+
+   <button id="muteToggle" class="mute-btn">UNMUTE AUDIO</button>
+
+    
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        // Find our background video element inside the container
+        const video = document.querySelector('.video-background-container video');
+        const muteBtn = document.getElementById('muteToggle');
+
+        if (video && muteBtn) {
+            muteBtn.addEventListener('click', () => {
+                if (video.muted) {
+                    video.muted = false;
+                    muteBtn.textContent = "MUTE AUDIO";
+                } else {
+                    video.muted = true;
+                    muteBtn.textContent = "UNMUTE AUDIO";
+                }
+            });
+        }
+    });
+</script>
+ 
 </div>
         
-    <div class="container">
-        <header>
-            <h1>Nate Thompson</h1>
-            <div class="title-sub">Executive Creative Director</div>
-        </header>
-
-        <section class="intro-text">
-            <p>I lead the creative vision for multi-market brand experiences and immersive cultural spaces. Fusing a deep foundation in technical logic with narrative-driven leadership, I help global portfolios design spaces that tell stories and build community.</p> 
-            <p>Over the past 15 years, I have guided creative teams and anchored global pitches for portfolios including adidas, Airbnb, Dr Martens, Google, HUGO, Jameson, Lego, Nike & Pinterst &amp; Revolut.</p>
-        </section>
+  
 
   
 
-        <div class="links" style="margin-top: 3rem;">
-            <a href="https://customer-wokzagfroyr197cz.cloudflarestream.com/286c597a1e2a088cff6c08d6a25bc053/watch?autoplay=true" target="_blank" class="watch-reel-btn">
-                SHOWREEL
-            </a>
-        </div>
-    </div>
+
 
 </body>
 </html>

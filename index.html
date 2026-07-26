@@ -134,12 +134,15 @@
 </head>
 <body>
 
-    <div class="video-background-container">
-        <video autoplay loop muted playsinline>
-            <source src="snippet.mp4" type="video/mp4">
-        </video>
-        <div class="video-overlay"></div>
-    </div>
+<div class="video-background-container">
+    <video autoplay loop muted playsinline>
+        <!-- Modern dynamic format (Fastest loading on Safari/iOS) -->
+        <source src="https://customer-wokzagfroyr197cz.cloudflarestream.com/88974f597cddd44527d949714aee8650/manifest/video.m3u8" type="application/x-mpegURL">
+        <!-- Direct fallback backup file format -->
+        <source src="https://customer-wokzagfroyr197cz.cloudflarestream.com/88974f597cddd44527d949714aee8650/downloads/default.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+</div>
         
     <div class="container">
         <header>
@@ -152,7 +155,7 @@
             <p>Over the past 15 years, I have guided creative teams and anchored global pitches for portfolios including adidas, Airbnb, Dr Martens, Google, HUGO, Jameson, Lego, Nike & Pinterst &amp; Revolut.</p>
         </section>
 
-        <video src="snippet.mp4" controls autoplay width="300"></video>
+  
 
         <div class="links" style="margin-top: 3rem;">
             <a href="https://customer-wokzagfroyr197cz.cloudflarestream.com/286c597a1e2a088cff6c08d6a25bc053/watch?autoplay=true" target="_blank" class="watch-reel-btn">

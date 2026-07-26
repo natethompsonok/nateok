@@ -177,19 +177,13 @@
 </head>
 <body>
 
-    <!-- FIXED: Wrapped video and specified direct video streaming URLs -->
-    <div class="video-background-container">
-        <video autoplay loop muted playsinline>
-            <!-- Modern HLS streaming format (Fastest loading on Safari/iOS) -->
-            <source src="https://customer-wokzagfroyr197cz.cloudflarestream.com/286c597a1e2a088cff6c08d6a25bc053/manifest/video.m3u8" type="application/x-mpegURL">
-            <!-- Fallback MP4 stream link (For standard desktop browsers) -->
-            <source src="https://customer-wokzagfroyr197cz.cloudflarestream.com/286c597a1e2a088cff6c08d6a25bc053/downloads/default.mp4" type="video/mp4">
-        </video>
-       
-        <div class="video-overlay"></div>
-    </div>
-
-    <button id="muteToggle" class="mute-btn">PLAY MUSIC</button>
+ <div class="video-background-container">
+    <video autoplay loop muted playsinline>
+        <!-- Change this to match your exact file name (e.g., bg-loop.mp4) -->
+        <source src="snippet.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+</div>
     
     <div class="container">
         <header>

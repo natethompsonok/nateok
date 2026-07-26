@@ -172,7 +172,7 @@
     </video>
 
 <div class="info">Nate Thompspon, ECD, Showreel</div>
-   <button id="muteToggle" class="mute-btn">UNMUTE AUDIO</button>
+   <button id="muteToggle" class="mute-btn">PLAY MUSIC</button>
 
     
 <script>
@@ -185,10 +185,10 @@
             muteBtn.addEventListener('click', () => {
                 if (video.muted) {
                     video.muted = false;
-                    muteBtn.textContent = "MUTE AUDIO";
+                    muteBtn.textContent = "STOP MUSIC";
                 } else {
                     video.muted = true;
-                    muteBtn.textContent = "UNMUTE AUDIO";
+                    muteBtn.textContent = "PLAY MUSIC";
                 }
             });
         }

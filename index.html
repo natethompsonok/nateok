@@ -189,7 +189,7 @@
         <div class="video-overlay"></div>
     </div>
 
-    <button id="muteToggle" class="mute-btn">UNMUTE AUDIO</button>
+    <button id="muteToggle" class="mute-btn">PLAY MUSIC</button>
     
     <div class="container">
         <header>
@@ -213,10 +213,10 @@
             muteBtn.addEventListener('click', () => {
                 if (video.muted) {
                     video.muted = false;
-                    muteBtn.textContent = "SHHHHH!";
+                    muteBtn.textContent = "NO MUSIC";
                 } else {
                     video.muted = true;
-                    muteBtn.textContent = "MUSIC";
+                    muteBtn.textContent = "PLAY MUSIC";
                 }
             });
         }

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nate Thompson | Executive Creative Director</title>
+    <style>
+        /* Modern Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+             font-family: "DM Sans", sans-serif;
+             font-optical-sizing: auto;
+             font-weight: bold;
+             font-style: normal;
+            background-color: #0b0b0b;
+            color: #f5f5f7;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* FIXED: Changed z-index to -2 to lock it safely behind the text layer */
+        .video-background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -2; 
+            overflow: hidden;
+            background-color: #0b0b0b;
+        }
+
+        .video-background-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Dark overlay to ensure text copy remains perfectly readable */
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(11, 11, 11, 0.45) 0%, rgba(11, 11, 11, 0.60) 100%);
+            z-index: 1; /* Sits cleanly on top of the video within the container */
+            pointer-events: none; 
+        }
+
+        /* Content Container sitting above background */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header Section */
+        header {
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            letter-spacing: -0.0em;
+            text-transform: uppercase;
+            margin-bottom: 0rem;
+        }
+        .title-sub {
+            font-size: 1.2rem;
+            color: #fff;
+            font-weight: 400;
+        }
+
+        /* Snappy Narrative Copy */
+        .intro-text {
+            font-size: 1.2rem;
+            font-weight: 200;
+            letter-spacing: -0.02em;
+            color: #ffffff;
+            margin-bottom: 5rem;
+        }
+
+        .intro-text p {
+            margin-bottom:20px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.15);
+            margin-bottom: 4rem;
+        }
+
+        /* Contact & Footer Links */
+        .links {
+            margin-top: 2.5rem;
+            display: flex;
+            gap: 1.5rem;
+        }
+        .links a {
+            color: #f5f5f7;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid #f5f5f7;
+            padding-bottom: 2px;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        .links a:hover {
+            color: #86868b;
+            border-color: #86868b;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .intro-text { font-size: 1.3rem; }
+            .container { padding: 2rem 1rem; }
+            header { margin-top: 2rem; margin-bottom: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="video-background-container">
+    <video autoplay loop muted playsinline>
+        <!-- Modern dynamic format (Fastest loading on Safari/iOS) -->
+        <source src="https://customer-wokzagfroyr197cz.cloudflarestream.com/4a5d36b857fffc322ce48fc539b452cb/manifest/video.m3u8" type="application/x-mpegURL">
+        <!-- Direct fallback backup file format -->
+        <source src="https://customer-wokzagfroyr197cz.cloudflarestream.com/4a5d36b857fffc322ce48fc539b452cb/downloads/default.mp4" type="video/mp4">
+      
+    </video>
+    <div class="video-overlay"></div>
+</div>
+        
+    <div class="container">
+        <header>
+            <h1>Nate Thompson</h1>
+            <div class="title-sub">Executive Creative Director</div>
+        </header>
+
+        <section class="intro-text">
+            <p>I lead the creative vision for multi-market brand experiences and immersive cultural spaces. Fusing a deep foundation in technical logic with narrative-driven leadership, I help global portfolios design spaces that tell stories and build community.</p> 
+            <p>Over the past 15 years, I have guided creative teams and anchored global pitches for portfolios including adidas, Airbnb, Dr Martens, Google, HUGO, Jameson, Lego, Nike & Pinterst &amp; Revolut.</p>
+        </section>
+
+  
+
+        <div class="links" style="margin-top: 3rem;">
+            <a href="https://customer-wokzagfroyr197cz.cloudflarestream.com/286c597a1e2a088cff6c08d6a25bc053/watch?autoplay=true" target="_blank" class="watch-reel-btn">
+                SHOWREEL
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
